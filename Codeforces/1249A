@@ -1,0 +1,57 @@
+#define mp make_pair
+#define pb push_back
+#define mem(v) memset((v),0,sizeof(v));
+#define pll pair<ll,ll>
+#define mll map<ll,ll>
+#define sll set<ll>
+#define vll vector<ll>
+#define maxi(a,b,c) max(a,max(b,c))
+#define mini(a,b,c) min(a,min(b,c))
+#define md(a,b)  ((a%mod)*(b%mod)+mod)%mod 
+#define ad(a,b)  (a%mod+b%mod+mod)%mod
+#define nl endl
+#define cases ll t;cin>>t;while(t--)
+ 
+const int N=1e5;
+ 
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cases{
+       ll n;
+       cin>>n;
+       ll a[n];
+       f(i,n){
+           cin>>a[i];
+ 
+       }
+       ll f=0;
+       f(i,n)
+       {
+           
+           for(ll j=i+1;j<n;j++)
+           {
+               if(abs(a[j]-a[i])==1)
+               {
+                   f=1;
+                   break;
+               }
+           }
+           if(f==1)
+           break;
+       }
+       if(f==1)
+       cout<<2<<nl;
+ 
+       else
+       cout<<1<<nl;
+ 
+ 
+ 
+    }
+    
+   
+    return 0;
+}
